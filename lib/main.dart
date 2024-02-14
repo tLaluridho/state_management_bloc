@@ -90,21 +90,21 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: ButtonBar(
         children: [
           FloatingActionButton(
-            heroTag: 'decrement',
-            onPressed: () {
-              // context.read<CounterCubit>().decrement();
-              context.read<CounterBloc>().add(OnCounterdecrement());
-            },
-            tooltip: 'Increment',
-            child: const Icon(Icons.remove),
-          ),
-          FloatingActionButton(
             heroTag: 'increment',
             onPressed: () {
               context.read<CounterBloc>().add(OnCounterIncrement());
             },
             tooltip: 'Increment',
             child: const Icon(Icons.add),
+          ),
+          FloatingActionButton(
+            heroTag: 'decrement',
+            onPressed: () {
+              // context.read<CounterCubit>().decrement();
+              context.read<CounterBloc>().add(OnCounterdecrement());
+            },
+            tooltip: 'Decrement',
+            child: const Icon(Icons.remove),
           ),
         ],
       ),
